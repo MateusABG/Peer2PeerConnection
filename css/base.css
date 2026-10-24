@@ -1,0 +1,10 @@
+:root{color-scheme:dark;--bg:#14151a;--panel:#1a1b22;--deep:#0e0f13;--line:#2a2c36;--text:#f2f3f7;--mute:#8b8fa3;--accent:#ff3b4e;--ok:#18c964;
+ --sat:env(safe-area-inset-top,0px);--sar:env(safe-area-inset-right,0px);--sab:env(safe-area-inset-bottom,0px);--sal:env(safe-area-inset-left,0px)}
+*,*:before,*:after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--text);font-family:'Chakra Petch',ui-monospace,Menlo,Consolas,monospace;-webkit-tap-highlight-color:transparent}
+button,input{font:inherit;color:inherit}
+input{font-size:16px} /* 16px+ stops iOS Safari from zooming into focused fields */
+button,input,label{touch-action:manipulation}
+.hidden{display:none!important}

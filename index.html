@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<meta name="theme-color" content="#14151a">
+<title>P2P Room</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<section id="login">
+ <div class="card">
+  <div class="logo">Peer <span>2</span> Peer Chat</div>
+  <div class="codebox"><small>Your code · tap to copy</small><b id="mycode">------</b></div>
+  <label for="uname">Username</label>
+  <input class="f" id="uname" maxlength="20" autocomplete="off" autocapitalize="words" enterkeyhint="next" placeholder="Pick a name">
+  <label for="jcode">Code to stream</label>
+  <div class="row"><input class="f" id="jcode" maxlength="6" autocomplete="off" autocapitalize="characters" autocorrect="off" spellcheck="false" enterkeyhint="go" placeholder="ABC123" style="text-transform:uppercase"><button class="btn go" id="join">Connect</button></div>
+  <button class="btn host" id="host">Host</button>
+  <div class="err" id="err"></div>
+ </div>
+</section>
+
+<script src="js/config.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

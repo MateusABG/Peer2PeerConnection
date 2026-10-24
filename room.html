@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<meta name="theme-color" content="#14151a">
+<title>P2P Room</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/room.css">
+</head>
+<body>
+
+<div id="connecting">Connecting…</div>
+<button id="unmute" class="hidden">Tap to enable sound</button>
+<div id="toast" class="hidden" role="status"></div>
+
+<div id="app" class="hidden">
+ <aside class="side">
+  <div class="me" id="meName"></div>
+  <div class="cnt">Users connected: <span id="cnt">1</span></div>
+  <div class="room" id="roomTag" title="Copy room code"></div>
+  <nav>
+   <button data-v="chat" class="on">Chat</button>
+   <button data-v="stream">Stream</button>
+   <button data-v="wb"><span class="lg">White </span>Board</button>
+   <button id="vcbtn">Voice (Users:<span id="cnt2">1</span>)</button>
+   <button class="leave" id="leave">Leave</button>
+  </nav>
+ </aside>
+ <main>
+  <header>
+   <span id="title">Chat Room</span>
+   <div class="hr">
+    <button class="chip" id="roomChip" aria-label="Invite friends"></button>
+    <button class="hmic" id="hmic" aria-label="Toggle microphone">MIC</button>
+   </div>
+  </header>
+  <section class="view on" id="v-chat">
+   <div id="log"></div>
+   <form class="send" id="sendf"><input id="msg" autocomplete="off" enterkeyhint="send" placeholder="Type a message…"><button>Send ›</button></form>
+  </section>
+  <section class="view" id="v-stream">
+   <div class="stage">
+    <div class="screen" id="screen"><span>No one is streaming</span></div>
+    <div class="thumbs" id="thumbs"></div>
+    <div class="tools">
+     <button class="pill" id="share">Share my screen</button>
+     <button class="pill hidden" id="flip">Flip camera</button>
+     <button class="pill" id="fs">Fullscreen</button>
+    </div>
+   </div>
+  </section>
+  <section class="view" id="v-wb">
+   <div class="wb">
+    <div class="tools" id="wbtools"><button class="pill" id="clr">Clear</button></div>
+    <div class="tip">Tip: turn your phone sideways for a bigger board</div>
+    <div class="cv"><canvas id="cv" width="1200" height="700"></canvas></div>
+   </div>
+  </section>
+ </main>
+ <aside class="vc">
+  <h2>Voice Chat</h2>
+  <div id="vcl"></div>
+  <button class="mic" id="mic">MIC OFF</button>
+ </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/peerjs@1.5.4/dist/peerjs.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/mobile.js"></script>
+<script src="js/state.js"></script>
+<script src="js/network.js"></script>
+<script src="js/chat.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/whiteboard.js"></script>
+<script src="js/media.js"></script>
+<script src="js/room.js"></script>
+</body>
+</html>
